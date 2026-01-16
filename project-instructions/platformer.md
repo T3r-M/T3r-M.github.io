@@ -335,6 +335,7 @@ createPlatform(100, 20, 10, 10, "lime"); // bright green for a finished platform
    ```javascript
    createCollectable("steve", 1350, 50);
    createCollectable("diamond", 200, 170, 0.5, 0.7);
+   
    ```
 
 <br>
