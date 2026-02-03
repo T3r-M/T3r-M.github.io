@@ -583,7 +583,47 @@ function drawCannons() {
     ctx.restore(); //this unrotates the canvas so the canvas is straight, but now since you did that the picture looks rotated
   }
 }
+// function drawCannons2() {
+//   for (var i = 0; i < cannons.length; i++) {
+//     if (cannons[i].projectileCountdown >= cannons[i].timeBetweenShots) {
+//       cannons[i].projectileCountdown = 0;
+//       createProjectile(
+//         cannons[i].location,
+//         cannons[i].x,
+//         cannons[i].y,
+//         cannons[i].projectileWidth,
+//         cannons[i].projectileHeight
+//       );
+//     } else {
+//       cannons[i].projectileCountdown = cannons[i].projectileCountdown + 1;
+//     }
 
+//     // move cannon if minX and maxX are set
+//     if (cannons[i].minX !== null && cannons[i].maxX !== null) {
+//       cannons[i].x += cannons[i].speedX;
+//       if (cannons[i].x < cannons[i].minX || cannons[i].x > cannons[i].maxX) {
+//         cannons[i].speedX *= -1;
+//       }
+//     }
+//     // move cannon if minY and maxY are set
+//     if (cannons[i].minY !== null && cannons[i].maxY !== null) {
+//       cannons[i].y += cannons[i].speedY;
+//       if (cannons[i].y < cannons[i].minY || cannons[i].y > cannons[i].maxY) {
+//         cannons[i].speedY *= -1;
+//       }
+//     }
+
+//     ctx.fillStyle = "grey";
+//     ctx.save(); //save the current translation of the screen.
+//     ctx.translate(cannons[i].x, cannons[i].y); //you are moving the top left of the screen to the pictures location, this is because you can't rotate the image, you have to rotate the whole page
+//     ctx.rotate((cannons[i].rotation * Math.PI) / 180); //then you rotate. rotation is centered on 0,0 on the canvas, which is why we moved the picture to 0,0 with translate(x,y)
+//     ctx.drawImage(cannonImage, 0, 0, cannonWidth, cannonHeight); //you draw the image on the rotated canvas. as of this line, the picture is straight and the rest of the page is rotated
+//     //also the previous line uses -width / 2 so that the picture is centered. This will mean that (0,0) is at the exact center of the image
+//     ctx.translate(-cannons[i].x, -cannons[i].y); //the reverse of the previous translate, this moves the page back to the correct place so that the image is no longer at (0,0)
+  
+//     ctx.restore(); //this unrotates the canvas so the canvas is straight, but now since you did that the picture looks rotated
+//   }
+// }
 function drawCollectables() {
   for (var i = 0; i < collectables.length; i++) {
     if (collectables[i].collected !== true) {

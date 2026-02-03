@@ -37,11 +37,16 @@ createPlatform(300,300, 100, 300)
 createPlatform(500,500, 200, 400)
 createPlatform(370,360, 200, 400)
 createPlatform(900,420, 500, 100)
+createProjectile("left", 100, 200, 100, 5)
+
+createProjectile("left", 100, 300, 100, 5)
+createProjectile("left", 100, 400, 100, 5)
 
     // TODO 3 - Create Collectables
 createCollectable("steve",900,350, 0.1)
 createCollectable("steve",200,150)
-   createCollectable("diamond", 200, 170, 0.5, 0.7);
+   createCollectable("diamond", 400, 100);
+   createCollectable("steve",400,330)
 
 // createCollectable("steve",600,50, 0.1)
    
@@ -51,7 +56,9 @@ createCollectable("steve",200,150)
     
     // TODO 4 - Create Cannons
 
-
+createCannon("right", 600, 100);
+createCannon("right", 700, 100);
+createCannon("right", 800, 100);
     
     
     //////////////////////////////////
