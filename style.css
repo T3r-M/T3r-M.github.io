@@ -22,7 +22,7 @@ nav {
 h1 {
     display: flex;
     align-items: center;
-    color: white;
+    color: rgb(0, 0, 0);
     flex: 1;
     margin: 0;
 }
@@ -63,6 +63,7 @@ main {
 .content {
     flex: 1;
     padding: 15px;
+    color: black
 }
 
 /* interests section styles */
@@ -75,3 +76,29 @@ main {
 h2, h3 {
     margin: 0px;
 }
+/* Portfolio styles */
+.content h1 {
+  color: black;
+}
+
+#portfolio {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#portfolio li {
+  background: #000000;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+#portfolio li:hover {
+  background: #000000;
+}
+
+#portfolio a {
+  text-decoration: none;
+  color: #ce0c0c;
+}
+
