@@ -50,21 +50,25 @@
         });
 
         // Every 50 milliseconds, call the update Function (see below)
-        setInterval(update, 50);
+        var interval = setInterval(update, 50);
         
 
         // Every time the box is clicked, call the handleBoxClick Function (see below)
         box.on("click", handleBoxClick);
         
         // moves the Box to a new position on the screen along the X-Axis
-        function moveBoxTo(newPositionX) {
-          box.css("left", newPositionX);
-        
-        }
+       function moveBoxTo(newPositionX, newPositionY) {
+           box.css("left", newPositionX);
+            box.css("top", newPositionY);
+}
 
         // changes the text displayed on the Box
         function changeBoxText(newText) {
           box.text(newText);
+          function endGame() {
+          clearInterval(interval);
+            } 
+
         }
 
         //////////////////////////////////////////////////////////////////
@@ -77,6 +81,15 @@
         var speed = 10
         var positionY;
         var speedY;
+        var randNum = Math.random(2) * 100;
+        var colorStr = "rgb(50, 23, 250)";
+        box.css("background-color", colorStr);
+        var positionY;
+        var speedY;
+        var boardHeight = jQuery(window).height();
+        
+        
+        
         
 
 
@@ -90,7 +103,7 @@
         function update() {
           // positionX += 10
           positionX = positionX + speed;
-          moveBoxTo(positionX);
+          moveBoxTo(positionX, positionY);
           if (positionX > boardWidth) {
             speed *= -1
           } if (positionX > 0) {
@@ -100,6 +113,11 @@
             function moveBoxTo(newPositionX, newPositionY) {
             box.css("left", newPositionX);
             box.css("top", newPositionY);
+            function moveBoxTo(newPositionX, newPositionY) {
+            box.css("left", newPositionX);
+            box.css("top", newPositionY);
+            moveBoxTo(positionX, positionY);
+}
 }
         
   // Code to reverse speed goes here
@@ -121,8 +139,8 @@
         function handleBoxClick() {
           positionX = 0
           changeBoxText(points)
-          points = points + 1;
-          speed = speed + 3;
+          points = points + 20000000000000000;
+          speed = speed + 10000;
 
 
 
