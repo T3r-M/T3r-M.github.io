@@ -31,17 +31,20 @@ var circles = []; // variable to store all circles in an array
             physikz.addRandomVelocity(circle, canvas, 5, 5);
             view.addChild(circle);
             circles.push(circle);
-            physikz.updatePosition();
+            
             
         }
 
 
         // TODO 3 : Call the drawCircle() function
+    
+         drawCircle();
         drawCircle();
         drawCircle();
         drawCircle();
         drawCircle();
-        drawCircle();
+     
+     
      
 
         // TODO 7 : Use a loop to create multiple circles
@@ -64,18 +67,18 @@ var circles = []; // variable to store all circles in an array
             // TODO 4 : Update the position of each circle using physikz.updatePosition()
                 circles[0]  
         
-            // physikz.updatePosition(circles);
-        //    physikz.updatePosition(circles);
-        //    physikz.updatePosition(circles);
-        //    physikz.updatePosition(circles);
-        //    physikz.updatePosition(circles);
+            physikz.updatePosition(circles);
+           physikz.updatePosition(circles);
+           physikz.updatePosition(circles);
+           physikz.updatePosition(circles);
+           physikz.updatePosition(circles);
             // TODO 5 : Call game.checkCirclePosition() on your circles
             // game.checkCirclePosition()
-            physikz.updatePosition(circle[0]);
-            physikz.updatePosition(circle[1]);
-            physikz.updatePosition(circle[2]);
-            physikz.updatePosition(circle[3]);
-            physikz.updatePosition(circle[4]);
+            physikz.updatePosition(circles[0]);
+            physikz.updatePosition(circles[1]);
+            physikz.updatePosition(circles[2]);
+            physikz.updatePosition(circles[3]);
+            physikz.updatePosition(circles[4]);
         
            
             // TODO 8 / TODO 9 : Iterate over the array
@@ -99,7 +102,7 @@ var circles = []; // variable to store all circles in an array
             }
             
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
-            
+            var rightEdge = circle.x + circle.radius;
 
 
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
