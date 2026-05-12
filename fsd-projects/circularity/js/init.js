@@ -37,12 +37,14 @@ var circles = []; // variable to store all circles in an array
 
 
         // TODO 3 : Call the drawCircle() function
-    
-         drawCircle();
+    for(var i = 0; i < 100; i++){
         drawCircle();
-        drawCircle();
-        drawCircle();
-        drawCircle();
+    }
+        // drawCircle();
+        // drawCircle();
+        // drawCircle();
+        // drawCircle();
+        // drawCircle();
      
      
      
@@ -66,20 +68,19 @@ var circles = []; // variable to store all circles in an array
         function update() {
             // TODO 4 : Update the position of each circle using physikz.updatePosition()
                 circles[0]  
-        
-            physikz.updatePosition(circles);
-           physikz.updatePosition(circles);
-           physikz.updatePosition(circles);
-           physikz.updatePosition(circles);
-           physikz.updatePosition(circles);
-            // TODO 5 : Call game.checkCirclePosition() on your circles
-            // game.checkCirclePosition()
             physikz.updatePosition(circles[0]);
             physikz.updatePosition(circles[1]);
             physikz.updatePosition(circles[2]);
             physikz.updatePosition(circles[3]);
-            physikz.updatePosition(circles[4]);
-        
+            physikz.updatePosition(circles[4]);          
+            // TODO 5 : Call game.checkCirclePosition() on your circles
+            
+        game.checkCirclePosition(circles[0]);
+        game.checkCirclePosition(circles[1]);
+        game.checkCirclePosition(circles[2]);
+        game.checkCirclePosition(circles[3]);
+        game.checkCirclePosition(circles[4]);
+
            
             // TODO 8 / TODO 9 : Iterate over the array
            for (var i = 0; i < circles.length; i++) {
@@ -102,7 +103,23 @@ var circles = []; // variable to store all circles in an array
             }
             
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
-            var rightEdge = circle.x + circle.radius;
+    if(circle.x < 0){
+        // the circle is at the right edge
+        circle.x = canvas.width
+        };
+        
+        if(circle.y < 0){
+            // the circle is at the top edge
+         circle.y = canvas.height
+            // the circle is at the bottom edge
+         }
+         if(circle.y > canvas.height){
+            // the circle is at the top edge
+         circle.y = 0
+            // the circle is at the bottom edge
+         }
+        
+            
 
 
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
