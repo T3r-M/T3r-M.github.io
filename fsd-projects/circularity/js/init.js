@@ -83,10 +83,15 @@ var circles = []; // variable to store all circles in an array
 
            
             // TODO 8 / TODO 9 : Iterate over the array
-           for (var i = 0; i < circles.length; i++) {
-          // Code to update each circle
-        // physikz.updatePosition(/* bracket notation to access the fifth circle */);
-           }
+         for (var i = 0; i < circles.length; i++) {
+           // Code to update each circle
+           physikz.updatePosition(circles[i]);
+              game.checkCirclePosition(circles[i]);
+         }
+
+          
+    
+           
             
         }
     
